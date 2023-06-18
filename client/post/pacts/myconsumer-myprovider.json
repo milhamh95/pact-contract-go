@@ -1,0 +1,50 @@
+{
+  "consumer": {
+    "name": "MyConsumer"
+  },
+  "provider": {
+    "name": "MyProvider"
+  },
+  "interactions": [
+    {
+      "description": " GET /posts",
+      "providerState": "Server is up",
+      "request": {
+        "method": "GET",
+        "path": "/posts",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "userId": 1,
+            "id": 3,
+            "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+            "body": "ullam et saepe reiciendis voluptatem ad"
+          },
+          {
+            "userId": 1,
+            "id": 4,
+            "title": "eum et est occaecati",
+            "body": "ullam et saepe reiciendis voluptatem adipisci\\nsit amet"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
