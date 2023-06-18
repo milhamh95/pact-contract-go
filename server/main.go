@@ -13,6 +13,10 @@ type Post struct {
 }
 
 func main() {
+	StartServer()
+}
+
+func StartServer() {
 	app := fiber.New()
 
 	posts := []Post{
